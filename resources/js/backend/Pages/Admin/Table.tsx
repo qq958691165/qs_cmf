@@ -1,17 +1,11 @@
 import {usePage} from "@inertiajs/react";
-import {lazy, Suspense, useEffect, useState} from "react";
-import {ReactComponentLike} from "prop-types";
+import {lazy} from "react";
 import {Table} from "@quansitech/antd-admin";
 
 export default function () {
     const props = usePage<any>().props
 
-    const [Component, setComponent] = useState<ReactComponentLike>()
-    useEffect(() => {
-        setComponent(lazy(() => Table))
-    }, []);
+    const Component = lazy(() => Table)
 
-    return <>{Component
-        && <Suspense><Component {...props}/></Suspense>
-    }</>
+    return <Table {...props}/>
 }
