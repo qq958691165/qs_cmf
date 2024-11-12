@@ -5,13 +5,15 @@ import {ReactNode} from "react";
 import {App as AntdApp} from "antd";
 import "./extra";
 
-;((globalThis: any) => {
-    if (globalThis.$qsContainer) {
-        return;
-    }
+if (typeof window !== 'undefined') {
+    ;((globalThis: any) => {
+        if (globalThis.$qsContainer) {
+            return;
+        }
 
-    globalThis.$qsContainer = container
-})(window)
+        globalThis.$qsContainer = container
+    })(window);
+}
 
 router.on('invalid', ev => {
     // 返回html时直接跳转

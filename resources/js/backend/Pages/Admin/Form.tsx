@@ -1,12 +1,15 @@
 import {usePage} from "@inertiajs/react";
-import {lazy} from "react";
-import {ReactComponentLike} from "prop-types";
+import {lazy, Suspense} from "react";
 import {Form} from "@quansitech/antd-admin";
+
+const Component = lazy(Form)
 
 export default function () {
     const props = usePage<any>().props
 
-    const Component = lazy(() => Form) as ReactComponentLike
-
-    return <Form {...props}/>
+    return <>
+        <Suspense>
+            <Component {...props}/>
+        </Suspense>
+    </>
 }
