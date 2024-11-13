@@ -2,7 +2,6 @@ import {createInertiaApp, router} from '@inertiajs/react';
 import {createRoot} from 'react-dom/client';
 import {container, Layout} from "@quansitech/antd-admin";
 import {ReactNode} from "react";
-import {App as AntdApp} from "antd";
 import "./extra";
 
 if (typeof window !== 'undefined') {
@@ -33,9 +32,7 @@ createInertiaApp({
     },
     setup({el, App, props}) {
         createRoot(el).render(
-            <AntdApp>
                 <App {...props} />
-            </AntdApp>
         )
     },
 })
