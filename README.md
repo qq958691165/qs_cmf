@@ -278,6 +278,10 @@ php artisan migrate:reset --no-cmd
   
    delete($name) //删除配置
 
+## Antd Admin后台
+
+[传送门](https://github.com/quansitech/antd-admin/blob/main/Readme.md)
+
 ## 后台JS
 
 [传送门](https://github.com/quansitech/qs_cmf/blob/master/docs/BackendJs.md)
