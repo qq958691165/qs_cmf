@@ -40,6 +40,7 @@ composer require quansitech/antd-admin
 ```
 
 * 若要开启antd-admin，请检查 `quansitech/qscmf-formitem-ueditor` 版本为 `^3.0` 或以上
+* 如果使用了 qscmf-formitem-object-storage 也需要升级到 ^3.0
 
 * 增加下列配置到app/Common/Conf/config.php配置文件里：
 
