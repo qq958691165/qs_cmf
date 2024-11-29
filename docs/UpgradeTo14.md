@@ -1,5 +1,18 @@
 # v14升级步骤
 
+* 修改composer.json文件
+
+```text
+修改 require 以下扩展版本
+"tiderjian/think-core":"^14.0.0"
+如果用了 overtrue/wechat 需要升级到 w7corp/easywechat ^6.7
+
+修改 require-dev 以下扩展版本
+"phpunit/phpunit": "^10.0"
+"laravel/dusk": "^v8.2.5"
+```
+
+
 * 复制14版本的下列文件到你的项目对应目录下：
 
 ```text
@@ -11,7 +24,6 @@ resources/js
 tsconfig.json
 vite.backend.config.js
 vite.config.js
-www/Public/backend/.gitignore
 ```
 
 * 在app/Admin/View/default/common/dashboard_layout.html前面增加下列代码：
@@ -23,11 +35,12 @@ www/Public/backend/.gitignore
 * 安装依赖
 
 ```shell
-composer require quansitech/qscmf-buttontype-modal
+composer require quansitech/qscmf-buttontype-modal ^4.0
 composer require quansitech/antd-admin
 ```
 
-* 若要开启antd-admin，请检查 `quansitech/qscmf-formitem-ueditor` 版本为 `^2.0` 或以上
+* 若要开启antd-admin，请检查 `quansitech/qscmf-formitem-ueditor` 版本为 `^3.0` 或以上
+* 如果使用了 qscmf-formitem-object-storage 也需要升级到 ^3.0
 
 * 增加下列配置到app/Common/Conf/config.php配置文件里：
 
