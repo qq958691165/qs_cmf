@@ -11,7 +11,6 @@ resources/js
 tsconfig.json
 vite.backend.config.js
 vite.config.js
-www/Public/backend/.gitignore
 ```
 
 * 在app/Admin/View/default/common/dashboard_layout.html前面增加下列代码：
