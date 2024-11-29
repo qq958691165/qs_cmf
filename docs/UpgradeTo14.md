@@ -1,5 +1,18 @@
 # v14升级步骤
 
+* 修改composer.json文件
+
+```text
+修改 require 以下扩展版本
+"tiderjian/think-core":"^14.0.0"
+如果用了 overtrue/wechat 需要升级到 w7corp/easywechat ^6.7
+
+修改 require-dev 以下扩展版本
+"phpunit/phpunit": "^10.0"
+"laravel/dusk": "^v8.2.5"
+```
+
+
 * 复制14版本的下列文件到你的项目对应目录下：
 
 ```text
