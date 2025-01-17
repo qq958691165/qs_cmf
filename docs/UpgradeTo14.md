@@ -66,7 +66,15 @@ composer require quansitech/antd-admin
 * 将下列文件代码合并到项目中，自行检查是否有客制化代码：
 
 ```
+app/Admin/Conf/config.php
 app/Admin/Controller/DashboardController.class.php
 app/Admin/Controller/RoleController.class.php
 app/Admin/Controller/UserController.class.php
+```
+
+* 部分客制化较强的页面，需要用到原页面渲染，则在方法中临时修改配置即可
+
+```php
+C('ANTD_ADMIN_BUILDER_ENABLE', false);
+C('ANTD_ADMIN_NEW_LAYOUT', false);
 ```
