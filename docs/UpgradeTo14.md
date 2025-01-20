@@ -78,3 +78,8 @@ app/Admin/Controller/UserController.class.php
 C('ANTD_ADMIN_BUILDER_ENABLE', false);
 C('ANTD_ADMIN_NEW_LAYOUT', false);
 ```
+
+* composer包替换，可能需要安装npm包，请查看具体文档安装
+
+1. [tiderjian/qs-grid-import](https://github.com/quansitech/qs-grid-import) -> [quansitech/antd-admin-grid-import](https://github.com/quansitech/antd-admin-grid-import)
+2. [quansitech/qscmf-topbutton-export](https://github.com/quansitech/qscmf-topbutton-export) -> [quansitech/antd-admin-table-action-export](https://github.com/quansitech/antd-admin-table-action-export)
