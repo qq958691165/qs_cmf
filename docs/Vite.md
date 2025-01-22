@@ -12,8 +12,8 @@ resources
  |     |     |___ Pages  // 页面组件目录
  |     |     |___ app.jsx  // 入口文件
  |     |___ backend  // 后台资源
- |     |     |___ Pages  // 页面组件目录
- |     |     |___ app.jsx  // 入口文件
+ |           |___ Pages  // 页面组件目录
+ |           |___ app.jsx  // 入口文件
 vite.config.js // 前台vite配置文件
 vite.backend.config.js // 后台vite配置文件
 ```
