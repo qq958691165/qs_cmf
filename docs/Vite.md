@@ -22,54 +22,54 @@ vite.backend.config.js // 后台vite配置文件
 
 1. 安装依赖包
 
-```shell
-npm install
-```
+    ```shell
+    npm install
+    ```
 
 2. 新增页面组件
 
-```tsx
-// resources/js/frontend/Pages/Index.tsx
-import {usePage, Head} from "@inertiajs/react";
-
-export default function (){
-    const props = usePage<{
-        fooUrl: string,
-        barUrl: string
-    }>().props
-
-    return <>
-        <Head title="Index"></Head>
-        <h1>TP inertia</h1>
-    </>
-}
-```
+    ```tsx
+    // resources/js/frontend/Pages/Index.tsx
+    import {usePage, Head} from "@inertiajs/react";
+    
+    export default function (){
+        const props = usePage<{
+            fooUrl: string,
+            barUrl: string
+        }>().props
+    
+        return <>
+            <Head title="Index"></Head>
+            <h1>TP inertia</h1>
+        </>
+    }
+    ```
 
 3. 编译静态资源
 
-```shell
-# 前台编译
-npm run build
-# 后台编译
-npm run build:backend
-```
+    ```shell
+    # 前台编译
+    npm run build
+    # 后台编译
+    npm run build:backend
+    ```
 
 4. controller中返回inertia响应
 
-```php
-use Qscmf\Lib\Inertia\Inertia;
-
-$this->inertia('Index', [
-    // 页面的props
-    'foo' => 'bar'
-])
-
-// 或使用全局 Inertia 类
-Inertia::render('Index', [
-    // 页面的props
-    'foo' => 'bar'
-]);
-```
+    ```php
+    use Qscmf\Lib\Inertia\Inertia;
+    
+    $this->inertia('Index', [
+        // 页面的props
+        'foo' => 'bar'
+    ])
+    
+    // 或使用全局 Inertia 类
+    Inertia::render('Index', [
+        // 页面的props
+        'foo' => 'bar'
+    ]);
+    ```
 
 若想在请求生命周期中的其它地方向Inertia响应中添加数据，可参考如下代码：
 
