@@ -23,5 +23,6 @@ export default () => defineConfig({
     base: '/Public/build',
     server: {
         port: 5173,
+        cors: true,
     }
 })
